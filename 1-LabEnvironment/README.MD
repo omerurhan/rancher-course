@@ -1,5 +1,9 @@
 ## LAB ENVIRONMENT
 
+### Lab Architecture and Teck Stack
+
+![alt text](../images/rancher-lab.png)
+
 ### Install Prerequisite
 For macOS 
 ```
