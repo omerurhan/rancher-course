@@ -1,0 +1,14 @@
+# Version: 7.17.3
+replicas: 1
+extraEnvs:
+- name: discovery.type
+  value: single-node
+- name: cluster.initial_master_nodes
+  value: ""
+resources:
+  requests:
+    cpu: "100m"
+    memory: "500Mi"
+  limits:
+    cpu: "400m"
+    memory: "1Gi"

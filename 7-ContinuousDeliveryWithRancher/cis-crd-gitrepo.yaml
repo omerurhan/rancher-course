@@ -1,0 +1,30 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: cis-crds
+  namespace: fleet-default
+spec:
+  branch: release-v2.7
+  insecureSkipTLSVerify: false
+  paths:
+    - charts/rancher-cis-benchmark-crd/4.0.0
+  repo: https://github.com/rancher/charts.git
+  targetNamespace: ''
+  targets:
+    - clusterName: dev
+
+--- 
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: cis
+  namespace: fleet-default
+spec:
+  branch: release-v2.7
+  insecureSkipTLSVerify: false
+  paths:
+    - charts/rancher-cis-benchmark/4.0.0
+  repo: https://github.com/rancher/charts.git
+  targetNamespace: ''
+  targets:
+    - clusterName: dev
