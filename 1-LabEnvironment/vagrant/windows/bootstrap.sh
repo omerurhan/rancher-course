@@ -29,8 +29,7 @@ localhost rke2_type="server"
 ansible_user={{ ssh_user }} 
 EOF
 sed -i 's/ssh_user: ubuntu/ssh_user: vagrant/' /home/vagrant/rke2-ansible/vars/general-config.yml
-sed -i 's/rke2_version: v1.24.12+rke2r1/rke2_version: v1.27.5-rc3+rke2r1/' /home/vagrant/rke2-ansible/vars/general-config.yml
-sed -i 's/rke2_channel: stable/rke2_channel: latest/' /home/vagrant/rke2-ansible/vars/general-config.yml
+sed -i 's/rke2_version: v1.24.12+rke2r1/rke2_version: v1.25.13+rke2r1/' /home/vagrant/rke2-ansible/vars/general-config.yml
 grep -q 'connection' /home/vagrant/rke2-ansible/playbooks/rke2.yml || sed -i '/become: true/a \ \ connection: local' /home/vagrant/rke2-ansible/playbooks/rke2.yml
 ./provision.sh
 
