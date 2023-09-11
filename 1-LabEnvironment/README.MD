@@ -47,6 +47,7 @@ vagrant ssh upstream-01
 
 # Check kubernetes cluster
 sudo -i 
+export KUBECONFIG=/var/lib/rancher/rke2/server/cred/admin.kubeconfig 
 k get nodes 
 k get pods -A
 ```
