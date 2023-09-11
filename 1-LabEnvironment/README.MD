@@ -23,6 +23,9 @@ vagrant plugin install vagrant-vmware-desktop
 
 For windows
 ```
+# Install git bash
+https://github.com/git-for-windows/git/releases/tag/v2.42.0.windows.2
+
 # Disable Hyper-V on Powershell
 Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All
 
