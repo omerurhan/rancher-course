@@ -18,7 +18,6 @@ kind create cluster --config clusters.yaml --name dev
 
 Patch cluster-agent and fleet agent for DNS resolution
 ``````
-``````
 cat > patch.yaml <<EOF
 spec:
   template:
@@ -31,3 +30,5 @@ EOF
 
 /var/lib/rancher/rke2/bin/kubectl patch deployment cattle-cluster-agent --patch-file patch.yaml -n cattle-system
 ``````
+
+
