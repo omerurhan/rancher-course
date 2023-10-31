@@ -16,6 +16,13 @@ kind create cluster --config clusters.yaml --name dev
 - Create RKE2 cluster on UI
 - Connect downstream host and run registration command
 
+# Display downstream cluster installation process
+```
+export KUBECONFIG=/etc/rancher/rke2/rke2.yaml
+ln -s /var/lib/rancher/rke2/bin/kubectl /usr/local/bin/kubectl
+watch kubectl get pods -A
+```
+
 Patch cluster-agent and fleet agent for DNS resolution
 ``````
 cat > patch.yaml <<EOF
